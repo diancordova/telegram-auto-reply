@@ -39,7 +39,7 @@ async def handle_new_message(event):
     needToProceed = from_.is_self if debug_mode else not from_.is_self and (event.is_private or re.search("@"+me.username,event.raw_text))
     if needToProceed:  # only auto-reply to private chats:  # only auto-reply to private chats   
         if not from_.bot and event:  # don't auto-reply to bots
-            print "Hai Welcome Telegram "
+            print "Hai Welcome Telegram"
             print(time.asctime(), '-', event.message)  # optionally log time and message
             time.sleep(1)  # pause for 1 second to rate-limit automatic replies   
             message = ""
